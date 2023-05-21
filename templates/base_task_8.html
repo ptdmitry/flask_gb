@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Мой сайт
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header class="header">
+        <h3 class="logo">LOGO</h3>
+    </header>
+    <menu class="menu">
+        <ul class="nav">
+            <li class="nav_item"><a href="/">Основная</a></li>
+            <li class="nav_item"><a href="/about/">О нас</a></li>
+            <li class="nav_item"><a href="/contacts/">Контакты</a></li>
+        </ul>
+    </menu>
+
+    {% block content %}
+        <h1>Сайт</h1>
+    {% endblock %}
+
+    <footer>
+        <hr>
+        <p>Все права защищены</p>
+    </footer>
+</body>
+</html>

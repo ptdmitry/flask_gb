@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Магазин одежды
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header class="header">
+        <h3 class="logo">LOGO</h3>
+    </header>
+
+    <menu class="main-menu">
+        <ul class="nav">
+            {% block menu %}
+            <li class="nav_item"><a href="/">Основная</a></li>
+            <li class="nav_item"><a href="/clothes/">Одежда</a></li>
+            <li class="nav_item"><a href="/shoes/">Обувь</a></li>
+            {% endblock %}
+        </ul>
+    </menu>
+
+    {% block content %}
+        <h1>Главная страница интернет-магазина одежды</h1>
+    {% endblock %}
+
+    <footer>
+        <hr>
+        <p>Все права защищены</p>
+    </footer>
+</body>
+</html>
