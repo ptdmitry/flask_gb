@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+    <h1>Библиотека</h1>
+    <form action="row">
+        {% for book in books %}
+           <p>
+               Название книги: {{ book.title }}<br>
+               Год издания: {{ book.date }}<br>
+               Количество экземпляров: {{ book.copies }}<br>
+               Автор: {{ book.author_id }}
+           </p>
+        {% endfor %}
+    </form>
+</body>
+</html>
